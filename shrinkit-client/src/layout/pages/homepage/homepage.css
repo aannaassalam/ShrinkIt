@@ -1,0 +1,203 @@
+main {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main .container {
+  width: 90%;
+  max-width: 450px;
+  /* height: 450px; */
+  /* margin: 20px; */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  /* border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+  z-index: 2;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 30px 60px 50px;
+}
+
+main .container h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+main .container p.error {
+  font-size: 16px;
+  color: #ff3333;
+  margin-bottom: 10px;
+}
+
+main .container .input-field {
+  margin-bottom: 10px;
+}
+
+main .container .input-field p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+main .container .input-field input {
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  width: 100%;
+  font-family: "Fira Sans", sans-serif;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+main .container .input-field input.error-border {
+  border: 1px solid #dc3545;
+}
+
+main .container .input-field input::placeholder {
+  font-family: "Fira Sans", sans-serif;
+}
+
+main .container .input-field input:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+main .container .input-field input:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+  border-radius: 0;
+  border: 1px solid #aaa !important;
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+main .container .input-field .styled-input {
+  display: flex;
+  align-items: center;
+}
+
+main .container .input-field .styled-input p {
+  background-color: #e9ecef;
+  padding: 0.49rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-radius: 0.25rem;
+  margin: 0;
+  color: #555;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-family: "Fira Sans", sans-serif;
+}
+
+main .container .input-field .styled-input input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+main .container .input-field .styled-input button {
+  color: #6c757d;
+  border-color: #6c757d;
+  background-color: #fff;
+  position: relative;
+  margin: 0;
+}
+
+main .container .input-field .styled-input button:hover {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+main .container .input-field .styled-input button .tooltiptext {
+  opacity: 0;
+  width: fit-content;
+  white-space: nowrap;
+  /* min-width: 80px; */
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: -110%;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+main .container .input-field .styled-input button .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 50%;
+  transform: rotate(-138deg) translateX(-50%);
+  border: 4px solid #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+main .container .input-field .styled-input button:hover .tooltiptext {
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+main .container button {
+  all: unset;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #0d6efd;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #0d6efd;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.margin {
+  margin-top: 20px;
+}
+
+main .container button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+@media (width<680px) {
+  main .container {
+    padding: 15px 30px 25px;
+  }
+
+  main .container .input-field .styled-input p {
+    font-size: 14px;
+  }
+
+  main .container .input-field input {
+    padding: 0.3rem 0.75rem;
+  }
+}

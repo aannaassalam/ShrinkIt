@@ -16,6 +16,12 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/getAllData", (req, res) => {
+  URLs.find()
+    .then((data) => res.status(200).json(data))
+    .catch((err) => res.status(400).json(err));
+});
+
 app.post("/createShortUrl", (req, res) => {
   const { generatedKey, preferredAlias, shortUrl, longUrl } = req.body;
   if (preferredAlias.length > 0) {

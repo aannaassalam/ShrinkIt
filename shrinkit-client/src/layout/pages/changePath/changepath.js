@@ -6,7 +6,7 @@ export default function Changepath() {
 
   useEffect(() => {
     window.location.replace(`${process.env.REACT_APP_BASE_URL}/${path}`);
-  }, []);
+  }, [path]);
 
   return <div>Redirecting...</div>;
 }
